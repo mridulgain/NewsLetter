@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const https = require('https');
 
+const PORT = 8080
 const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true})); 
@@ -55,8 +56,8 @@ app.post('/', function(req, res){
     request.end();
 });
 
-app.listen(3001, function(){
-    console.log("Server is up...@3001")
+app.listen(PORT, function(){
+    console.log("Server is up...@", PORT)
 });
 
 //api key : 41c3c62968f007ed1337eed39a016ae3-us19
