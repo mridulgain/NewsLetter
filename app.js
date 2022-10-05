@@ -38,7 +38,7 @@ app.post('/', function(req, res){
     const url = "https://us19.api.mailchimp.com/3.0/lists/f80ce1ac73"
     const options = {
         method: "POST",
-        auth: "rohan:41c3c62968f007ed1337eed39a016ae3-us19"
+        auth: "rohan:<TODO: mask the api key>"
     }
     var request = https.request(url, options, function(response){
         if (response.statusCode == 200){
@@ -60,5 +60,5 @@ app.listen(PORT, function(){
     console.log("Server is up...@", PORT)
 });
 
-//api key : 41c3c62968f007ed1337eed39a016ae3-us19
+//api key : masked
 //list id : f80ce1ac73
